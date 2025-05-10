@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="czz.css">
+  <title>mami</title>
+</head>
+<body>
+  <h1>Feliz día de las madres para la mamá MÁS hermosa de todas!</h1>
+  <div class="contenedor">
+    <img src="mamiyyo.jpeg" alt="Yo y mi madre">
+    <button onclick="mostrarMensaje()">¡Haga clic!</button>
+    <div class="mensaje" id="mensaje">
+      Gracias por todo, goldita hermosa
+    </div>
+  </div>
+  <audio id="sonidoEfecto" src="button-pressed-38129.mp3" preload="auto"></audio>
+  <audio id="cancionFondo" src="Vicente Fernández - Alejandra (Cover Audio).mp3" preload="auto"></audio>
+  <script>
+    function mostrarMensaje() {
+      const sonido = document.getElementById("sonidoEfecto");
+      sonido.play();
+      const cancionFondo = document.getElementById("cancionFondo");
+      if (cancionFondo.paused) {
+        cancionFondo.play();
+        cancionFondo.loop = true;
+      }
+      document.getElementById("mensaje").classList.add("mostrar");
+    }
+  </script>
+</body>
+</html>
